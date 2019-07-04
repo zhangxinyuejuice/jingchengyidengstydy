@@ -21,15 +21,16 @@
 			(2)DOM无法获得
 			(3)AJAX请求不能发送
 		4.如何设置同源策略
+		https://blog.csdn.net/nlznlz/article/details/79506655
 			text.xxx.com a.html
-<!-- <script>
+<script>
 	document.domain="example.com";	//设置同源策略
 	document.cookie="test1=hello";
 </script>
 	test2.xxx.com b.html
 <script>
 	document.cookie
-</script> -->
+</script>
 	domain=example.com;	//最实用的策略
 服务器默认的端口是80
 		5.怎么突破同源策略
@@ -38,7 +39,7 @@
 <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2121206715,2955288754&amp;fm=26&amp;gp=0.jpg">
 //测试一下用户手机的网速，根据网速给用户出网速慢的解决方案
 //如果网速慢，直接跳转到简版
-<!-- <iframe src="https://www.baidu.com" width="400px"></iframe> -->
+<iframe src="https://www.baidu.com" width="400px"></iframe>
 <script type="text/javascript">
 	var s=new image;
 	var start=Data.now();
@@ -49,5 +50,83 @@
 		v=1.1/t=kb/s
 	}
 </script>
+html语义化
+<div>
+	<table>
+		<thead>
+			<tr><th></th></tr>
+		</thead>
+		<tbody></tbody>
+		<tfoot></tfoot>
+	</table>
+	今天天气很好我和小明去游泳小敏淹死了我很难过但是我没淹死所以我很快乐我高兴地回家去了
+	<label for="test">打我打我打我啊</label>
+	<input type="test" id="test" name="">
+	<h1>《兴奋的一天》</h1>
+	<p><span class="test">今天</span>天气很好！</p>
+	<p>我和小明去游泳，小敏<strong>淹死了。。。</strong></p>
+	<p>我很<em>难过！</em>但是我没淹死？所以我很快乐。</p>
+	<p>我高兴地回家去了。</p>
+	<dl>
+		<dt>淹死了</dt>
+		<dd>这个个人不能再吃好吃的了</dd>
+	</dl>
+	《兴奋的一天》
+	今天天气很好！
+	我和小明去游泳，小敏淹死了。。。
+	我很难过！但是我没淹死？所以我很快乐。
+	我高兴地回家去了。
+	<ol>
+		<li>小明</li>
+		<li>小李</li>
+	</ol>
+	<ul>
+		<li>隔壁王老师</li>
+		<li>隔壁张老师</li>
+	</ul>
+</div>
+6.使用div进行布局，不要用div进行无意义的包裹span行内常见的元素
+<div class="header">
+	<div class="nav"></div>
+</div>
+<div class="article">
+	<p class="section"></p>
+</div>
+<div class="footer"></div>
+<header>
+	<nav></nav>
+</header>
+<article>
+	<section>
+		<h1></h1>
+		<p></p>
+	</section>
+</article>
+<footer></footer>
+页面结构
+<header>
+	<nav></nav>
+</header>
+<div class="content">
+	<section>1楼</section>
+	<section>2楼</section>
+	<aside></aside>
+	<address>地址</address>
+</div>
+<footer></footer>
+7.尽量少写html 一定要少写html
+第一减少dom渲染的时间 浪费整个文件大小
+一个html最次当三个元素用
+<style type="text/css">
+	.test{}
+	.test:before{}
+	.test:after{}
+</style>
+<div class="test"></div>
+8.高阶websocket postMessage（ifarame image）
+把代码压缩进图片
+百度：代码压缩进图片
+https://www.cnblogs.com/yoyohong/p/7255761.html
+http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html
 </body>
 </html>
